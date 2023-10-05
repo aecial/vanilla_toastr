@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toaster Prac</title>
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    /> -->
+    <link rel="stylesheet" href="./node_modules/toastr/build/toastr.min.css" />
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <form action="">
+      <button type="submit" id="show-btn" class="border border-black p-2 m-4">
+        Show Toaster
+      </button>
+    </form>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/toastr/build/toastr.min.js"></script>
+    <script>
+      $("#show-btn").on("click", function (e) {
+        e.preventDefault();
+        toastr.success("<p class='text-lg'>You have added a new note!</p>");
+      });
+    </script>
+  </body>
+</html>
